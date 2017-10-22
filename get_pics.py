@@ -21,5 +21,5 @@ http_url = 'http://file.codecat.one/Driver/Ecup%E7%99%BE%E5%8F%98%E5%A5%B3%E7%A5
 for x in mp4_url:
 	#拼接完整URL并用urlretrieve方法下载
 	imgurl = http_url+x
-	socket.setdefaulttimeout(10)
+	#socket.setdefaulttimeout(10)
 	urllib.urlretrieve(imgurl,'C:\\Python27\\get-pic\\videos\\%s' % x)
