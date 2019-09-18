@@ -34,6 +34,7 @@ for i in range(351000, 351005): #256805
         keys = re.findall('<h1>(.*?)</h1>', html)
         try:
             fileName = keys[0].decode('utf-8').encode('gbk')
+            fileName = re.sub('[\/:*?"<>|]','-',fileName)
         except Exception as e:
             print '91Forum Page Access Denied!!--------' + 'ID: ' + str(i)
         if not os.path.exists(fileName):
